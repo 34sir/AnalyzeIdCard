@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/util_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_capture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include_title" >
+
+        <com.example.chukc.analyzeidcard.takephoto.CameraSurfaceView
+            android:id="@+id/capture_preview"
+            android:layout_width="0dip"
+            android:layout_height="0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="请将身份证正面放入拍摄框内"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button_paizhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape"
+            android:gravity="center"
+            android:text="拍摄身份证"
+            android:textColor="#fefefe"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
